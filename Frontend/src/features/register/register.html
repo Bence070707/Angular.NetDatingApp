@@ -1,0 +1,14 @@
+<div class="animate-popup shadow-lg outline-0 card">
+    <form class="flex flex-col gap-4 m-10 hero-content" (ngSubmit)="register()" #registerForm="ngForm">
+        <h1 class="text-3xl font-bold mb-4">Register</h1>
+      <input [(ngModel)]="registerUser.email" name="email" type="text" placeholder="Email" class="input input-secondary mb-4" required />
+      <input [(ngModel)]="registerUser.password" name="password" type="password" placeholder="Password" class="input input-secondary mb-4" required />
+      <input [(ngModel)]="registerUser.displayName" name="displayName" type="text" placeholder="Display Name" class="input input-secondary mb-4" required />
+
+      <div class="flex justify-between gap-1.5">
+          <button (click)="cancel()" type="button" class="btn btn-soft">Cancel</button>
+          <button type="submit" class="btn btn-soft btn-secondary">Register</button>
+      </div>
+    </form>
+</div>
+

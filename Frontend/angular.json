@@ -5,7 +5,16 @@
   "projects": {
     "Frontend": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "path": "src",
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "path": "src/core/services",
+          "skipTests": true
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
