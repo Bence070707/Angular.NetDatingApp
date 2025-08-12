@@ -1,4 +1,4 @@
-<div id="navbar" class="fixed z-50 navbar bg-gradient-to-r from-[#348F50] to-[#56B4D3] shadow-sm">
+<div id="navbar" class="fixed z-10 navbar bg-gradient-to-r from-[#348F50] to-[#56B4D3] shadow-sm max-h-max">
     <div class="nav-container flex-1">
         <a class="btn btn-outline btn-secondary text-xl ml-10" routerLink="/"
             routerLinkActive="text-accent outline-accent" [routerLinkActiveOptions]="{ exact: true }"><svg
@@ -14,6 +14,11 @@
             <li><a routerLink="/messages" routerLinkActive="text-accent">Messages</a></li>
         </ul>
         }
+        <ul>
+
+            <li><a class="btn btn-secondary btn-soft" routerLink="/errors" routerLinkActive="text-accent">Errors</a></li>
+        </ul>
+
     </div>
 
     <div class="mr-10">

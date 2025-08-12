@@ -1,0 +1,13 @@
+<div class="hero-content justify-center min-h-screen min-w-screen">
+  <div class="card-body">
+    <h2 class="card-title">Server error</h2>
+    <p>{{ error.message }}</p>
+    <button (click)="detailsToggle()" class="btn btn-primary max-w-1/2">Details</button>
+    @if(showDetails) {
+        <div>
+            <p>Status Code: {{ error.statusCode }}</p>
+            <p>Details: {{ error.details }}</p>
+        </div>
+    }
+  </div>
+</div>
