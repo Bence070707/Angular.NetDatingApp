@@ -15,8 +15,7 @@ export class AccountService {
   login(creds: LoginCreds){
     return this.http.post<User>(`${this.baseUrl}account/login`, creds).pipe(
       tap((user: User) => {
-        localStorage.setItem('user', JSON.stringify(user));
-        this.currentUser.set(user);
+        this.setCurrentUser(user);
       })
     );
   }
@@ -24,10 +23,14 @@ export class AccountService {
   register(creds:RegisterCreds){
     return this.http.post<User>(`${this.baseUrl}account/register`, creds).pipe(
       tap((user: User) => {
-        localStorage.setItem('user', JSON.stringify(user));
-        this.currentUser.set(user);
+        this.setCurrentUser(user);
       })
     );
+  }
+
+  setCurrentUser(user: User){
+    localStorage.setItem('user', JSON.stringify(user));
+        this.currentUser.set(user);
   }
 
   logout(){
