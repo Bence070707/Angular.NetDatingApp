@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Nav } from "../layouts/nav/nav";
 import { Router, RouterOutlet } from '@angular/router';
 
@@ -11,4 +11,5 @@ import { Router, RouterOutlet } from '@angular/router';
 
 export class App{
   protected readonly title = "Dating app";
+  protected router = inject(Router);
 }

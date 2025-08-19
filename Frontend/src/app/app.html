@@ -1,4 +1,7 @@
 <app-nav class="fixed top-0 left-0 right-0 z-20" />
-<div class="mt-24 mx-4 ml-2">
+<div
+[class.mt-24] = "router.url !== '/'"
+[class.mx-4] = "router.url !== '/'"
+>
     <router-outlet></router-outlet>
 </div>

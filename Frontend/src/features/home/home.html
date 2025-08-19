@@ -1,3 +1,27 @@
-<div style="background-image: url('/public/couple.jpg');">
+<div class="hero min-h-screen relative">
+  <img
+    src="couple.jpg"
+    alt="Couple"
+    class="absolute inset-0 w-full h-full object-cover"
+  />
+  <div class="hero-overlay absolute inset-0 bg-black opacity-50"></div>
 
+  @if(registerMode()) {
+     <app-register (cancelRegister)="toggleRegisterMode($event)"></app-register>
+  }
+  @else {
+
+    <div class="hero-content text-neutral-content text-center relative z-10">
+      <div class="max-w-md">
+        <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
+        <p class="mb-5">
+          Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
+          excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a
+          id nisi.
+        </p>
+        <button (click)="toggleRegisterMode(true)" class="btn btn-soft">Register</button>
+      </div>
+    </div>
+  }
 </div>
+
